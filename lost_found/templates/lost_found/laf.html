@@ -1,0 +1,11 @@
+{% extends "lost_found/base.html" %}
+{% block title %}
+  Lost Property
+{% endblock title %}
+{% block body %}
+  {%for detail in details%}
+  <h1>{{detail.item}}</h1>
+  <p>{{detail.color}}</p>
+  <p>If found,please contact {{detail.Name}} of class {{detail.class}}</p>
+  {%endfor%}
+{% endblock body %}
